@@ -6,6 +6,27 @@ import plotly.graph_objects as go
 
 st.set_page_config(layout="wide")
 
+st.markdown("""<style>
+/* Sidebar multiselect background color */
+[data-testid="stSidebar"] .stMultiSelect .css-1n76uvr {
+    background-color: #001f3f !important;
+    color: white !important;
+    border-radius: 5px !important;
+}
+/* Main container styling */
+section.main .block-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* Improve header font */
+h1, h2, h3, h4 {
+    font-family: "Segoe UI", sans-serif;
+}
+</style>""", unsafe_allow_html=True)
+
+
 df = pd.read_csv("data.csv")
 
 # Normalize percentages
